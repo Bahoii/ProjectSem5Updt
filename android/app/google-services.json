@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "451069787686",
+    "firebase_url": "https://quiz-f0289-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "quiz-f0289",
+    "storage_bucket": "quiz-f0289.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:451069787686:android:045fa058aea9eac1e830e7",
+        "android_client_info": {
+          "package_name": "com.example.flutter_application_1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCDQ8S2nn2Hh9qfjvvVQuGccdbi9o1Kdjw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
