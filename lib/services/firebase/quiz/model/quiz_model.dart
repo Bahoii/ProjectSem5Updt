@@ -3,12 +3,14 @@ import 'package:quizz/services/firebase/course/model/course_model.dart';
 class QuizModel {
   final String quizId;
   final Course course;
+  final String mainQuiz;
   final String title;
   final int totalMarks;
 
   QuizModel({
     required this.quizId,
     required this.course,
+    required this.mainQuiz,
     required this.title,
     required this.totalMarks,
   });
@@ -19,6 +21,7 @@ class QuizModel {
         quizId: json['id'] ?? 'No ID',
         course: Course.fromJson(json['course']),
         title: json['title'] ?? 'No Title',
+        mainQuiz: json['quiz'] ?? 'No Main COurse',
         totalMarks: json['totalMarks'] ?? 0,
       );
     } catch (e) {

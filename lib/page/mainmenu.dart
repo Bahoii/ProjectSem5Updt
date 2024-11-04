@@ -1036,7 +1036,7 @@ class MainMenuState extends State {
                                 context,
                                 MaterialPageRoute(
                                     builder: (context) =>
-                                        QuizPage(quiz.title, quiz.title)));
+                                        QuizPage(quiz.mainQuiz, quiz.title)));
                           },
                           child: const Text(
                             'Start Quiz',
