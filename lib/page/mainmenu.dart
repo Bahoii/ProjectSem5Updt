@@ -226,8 +226,8 @@ class MainMenuState extends State {
                     Navigator.of(context).push(MaterialPageRoute(
                         builder: (context) => const EnterCodePage()));
                   },
-                  child: const Text(
-                    'ENTER CODE',
+                  child: Text(
+                    AppLocale.translate(context, 'code'),
                     style: TextStyle(fontSize: 15),
                   ),
                 ),
@@ -330,8 +330,8 @@ class MainMenuState extends State {
                               child: Container(
                                 padding: const EdgeInsets.symmetric(
                                     horizontal: 10, vertical: 10),
-                                child: const Text(
-                                  'Register',
+                                child: Text(
+                                  AppLocale.translate(context, 'daftar'),
                                   style: TextStyle(
                                     color: Colors.grey,
                                     fontSize: 16,
@@ -350,9 +350,9 @@ class MainMenuState extends State {
                               child: Container(
                                 padding: const EdgeInsets.symmetric(
                                     horizontal: 10, vertical: 10),
-                                child: const Text(
-                                  'Continue as Guest',
-                                  style: TextStyle(
+                                child: Text(
+                                  AppLocale.translate(context, 'tamu'),
+                                  style: const TextStyle(
                                     color: Colors.grey,
                                     fontSize: 16,
                                     fontWeight: FontWeight.bold,
@@ -378,35 +378,35 @@ class MainMenuState extends State {
                         onPressed: () {
                           _scrollTo(630);
                         },
-                        child: const Text("Fisika"),
+                        child: Text(AppLocale.translate(context, 'fisika')),
                       ),
                       const SizedBox(width: 50),
                       TextButton(
                         onPressed: () {
                           _scrollTo(1700);
                         },
-                        child: const Text("English "),
+                        child: Text(AppLocale.translate(context, 'inggris')),
                       ),
                       const SizedBox(width: 50),
                       TextButton(
                         onPressed: () {
                           _scrollTo(70);
                         },
-                        child: const Text("COURSE"),
+                        child: Text(AppLocale.translate(context, 'course')),
                       ),
                       const SizedBox(width: 50),
                       TextButton(
                         onPressed: () {
                           _scrollTo(990);
                         },
-                        child: const Text("Mathematics"),
+                        child: Text(AppLocale.translate(context, 'matematika')),
                       ),
                       const SizedBox(width: 50),
                       TextButton(
                         onPressed: () {
                           _scrollTo(1350);
                         },
-                        child: const Text("Kimia"),
+                        child: Text(AppLocale.translate(context, 'kimia')),
                       ),
                       const SizedBox(width: 50),
                     ],
@@ -418,19 +418,19 @@ class MainMenuState extends State {
                 AppLocale.translate(context, 'belajar'),
                 style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold),
               ),
-              const Text(
-                "Pilihan Terbaik Untuk Anda",
-                style: TextStyle(fontSize: 25),
+              Text(
+                AppLocale.translate(context, 'choose'),
+                style: const TextStyle(fontSize: 25),
               ),
               const SizedBox(height: 20),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const Row(
+                  Row(
                     children: [
                       Icon(Icons.star_border_outlined),
                       Text(
-                        'Merdeka Belajar',
+                        AppLocale.translate(context, 'merdeka'),
                         style: TextStyle(fontSize: 18),
                       )
                     ],
@@ -445,7 +445,7 @@ class MainMenuState extends State {
                             MaterialPageRoute(
                                 builder: (context) => const CourseAndQuiz()));
                       },
-                      child: const Text("SEE MORE >>",
+                      child: Text(AppLocale.translate(context, 'lihat'),
                           style: TextStyle(color: Colors.white)))
                 ],
               ),
@@ -472,12 +472,13 @@ class MainMenuState extends State {
                 },
               ),
               const SizedBox(height: 50),
-              const Text(
-                "Kumpulan Soal Quiz",
-                style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold),
+              Text(
+                AppLocale.translate(context, 'soalQuiz'),
+                style:
+                    const TextStyle(fontSize: 35, fontWeight: FontWeight.bold),
               ),
-              const Text(
-                "Selamat datang di Quiz kami",
+              Text(
+                AppLocale.translate(context, 'selamatDatangQuiz'),
                 style: TextStyle(fontSize: 25),
               ),
               const SizedBox(height: 50),
@@ -486,11 +487,11 @@ class MainMenuState extends State {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const Row(
+                  Row(
                     children: [
                       Icon(Icons.star_border_outlined),
                       Text(
-                        'Fisika',
+                        AppLocale.translate(context, 'fisika'),
                         style: TextStyle(fontSize: 18),
                       )
                     ],
@@ -505,7 +506,7 @@ class MainMenuState extends State {
                             MaterialPageRoute(
                                 builder: (context) => const CourseAndQuiz()));
                       },
-                      child: const Text("SEE MORE >>",
+                      child: Text(AppLocale.translate(context, 'lihat'),
                           style: TextStyle(color: Colors.white)))
                 ],
               ),
@@ -535,15 +536,14 @@ class MainMenuState extends State {
               const SizedBox(
                 height: 50,
               ),
-              //Mathematics
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const Row(
+                  Row(
                     children: [
                       Icon(Icons.star_border_outlined),
                       Text(
-                        'Mathematics',
+                        AppLocale.translate(context, 'matematika'),
                         style: TextStyle(fontSize: 18),
                       )
                     ],
@@ -558,7 +558,7 @@ class MainMenuState extends State {
                             MaterialPageRoute(
                                 builder: (context) => const CourseAndQuiz()));
                       },
-                      child: const Text("SEE MORE >>",
+                      child: Text(AppLocale.translate(context, 'lihat'),
                           style: TextStyle(color: Colors.white)))
                 ],
               ),
@@ -592,11 +592,11 @@ class MainMenuState extends State {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const Row(
+                  Row(
                     children: [
                       Icon(Icons.star_border_outlined),
                       Text(
-                        'Kimia',
+                        AppLocale.translate(context, 'kimia'),
                         style: TextStyle(fontSize: 18),
                       )
                     ],
@@ -611,7 +611,7 @@ class MainMenuState extends State {
                             MaterialPageRoute(
                                 builder: (context) => const CourseAndQuiz()));
                       },
-                      child: const Text("SEE MORE >>",
+                      child: Text(AppLocale.translate(context, 'lihat'),
                           style: TextStyle(color: Colors.white)))
                 ],
               ),
@@ -643,11 +643,11 @@ class MainMenuState extends State {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const Row(
+                  Row(
                     children: [
                       Icon(Icons.star_border_outlined),
                       Text(
-                        'English ',
+                        AppLocale.translate(context, 'inggris'),
                         style: TextStyle(fontSize: 18),
                       )
                     ],
@@ -662,7 +662,7 @@ class MainMenuState extends State {
                             MaterialPageRoute(
                                 builder: (context) => const CourseAndQuiz()));
                       },
-                      child: const Text("SEE MORE >>",
+                      child: Text(AppLocale.translate(context, 'lihat'),
                           style: TextStyle(color: Colors.white)))
                 ],
               ),

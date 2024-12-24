@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:quizz/language.dart';
 import 'package:quizz/page/LoginPage.dart';
 import 'package:quizz/page/contactus.dart';
 import 'package:quizz/page/courseandquiz.dart';
@@ -96,7 +97,7 @@ class DashboardModal extends StatelessWidget {
           ),
           ListTile(
             leading: const Icon(Icons.score),
-            title: const Text('Score'),
+            title: Text(AppLocale.translate(context, 'skor')),
             onTap: () {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => const Score()));
@@ -104,7 +105,7 @@ class DashboardModal extends StatelessWidget {
           ),
           ListTile(
             leading: const Icon(Icons.list),
-            title: const Text('Courses & Quizzes'),
+            title: Text(AppLocale.translate(context, 'kursusdanquiz')),
             onTap: () {
               Navigator.push(
                   context,
@@ -114,7 +115,7 @@ class DashboardModal extends StatelessWidget {
           ),
           ListTile(
             leading: const Icon(Icons.history),
-            title: const Text('Quiz History'),
+            title: Text(AppLocale.translate(context, 'riwayatQuiz')),
             onTap: () {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => const QuizHistory()));
@@ -122,7 +123,7 @@ class DashboardModal extends StatelessWidget {
           ),
           ListTile(
             leading: const Icon(Icons.contact_phone),
-            title: const Text('Contact'),
+            title: Text(AppLocale.translate(context, 'kontak')),
             onTap: () {
               Navigator.push(
                   context,
@@ -132,7 +133,7 @@ class DashboardModal extends StatelessWidget {
           ),
           ListTile(
             leading: const Icon(Icons.settings),
-            title: const Text('Settings'),
+            title: Text(AppLocale.translate(context, 'setelan')),
             onTap: () {
               Navigator.push(
                   context,
@@ -142,7 +143,7 @@ class DashboardModal extends StatelessWidget {
           ),
           ListTile(
             leading: const Icon(Icons.help),
-            title: const Text('Help'),
+            title: Text(AppLocale.translate(context, 'bantuan')),
             onTap: () {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => const HelpPage()));
@@ -151,7 +152,7 @@ class DashboardModal extends StatelessWidget {
           // Tambahkan opsi "About Us"
           ListTile(
             leading: const Icon(Icons.info),
-            title: const Text('About Us'),
+            title: Text(AppLocale.translate(context, 'Tentang Kami')),
             onTap: () {
               Navigator.push(context,
                   MaterialPageRoute(builder: (context) => const AboutUs()));
@@ -160,7 +161,7 @@ class DashboardModal extends StatelessWidget {
           // Tombol logout
           ListTile(
             leading: const Icon(Icons.logout),
-            title: const Text('Logout'),
+            title: Text(AppLocale.translate(context, 'keluar')),
             onTap: () async {
               SharedPreferences prefs = await SharedPreferences.getInstance();
 
