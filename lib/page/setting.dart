@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:quizz/l10n/l10n.dart';
+import 'package:quizz/l10n/languageprovide.dart';
 import 'package:quizz/page/provider/DarkmodeProvider.dart';
 
 class SettingsPage extends StatefulWidget {
@@ -32,12 +34,9 @@ class _SettingsPageState extends State<SettingsPage> {
     }
   }
 
-  void _changeLanguage(String? language) {
-    if (language != null) {
-      setState(() {
-        _selectedLanguage = language;
-      });
-    }
+  void _changeLanguage(Locale locale) {
+    final localeProvider = Provider.of<LocaleProvider>(context, listen: false);
+    localeProvider.setLocale(locale);
   }
 
   void _toggleAccessLocation(bool? value) {
@@ -173,22 +172,18 @@ class _SettingsPageState extends State<SettingsPage> {
                         title: const Text('Select Language'),
                         content: Column(
                           mainAxisSize: MainAxisSize.min,
-                          children: <Widget>[
-                            ListTile(
-                              title: const Text('Indonesia'),
+                          children: L10n.all.map((locale) {
+                            final language = locale.languageCode == 'en'
+                                ? 'English'
+                                : 'Indonesia';
+                            return ListTile(
+                              title: Text(language),
                               onTap: () {
-                                _changeLanguage('Indonesia');
-                                Navigator.pop(context);
+                                _changeLanguage(locale);
+                                Navigator.of(context).pop();
                               },
-                            ),
-                            ListTile(
-                              title: const Text('English'),
-                              onTap: () {
-                                _changeLanguage('English');
-                                Navigator.pop(context);
-                              },
-                            ),
-                          ],
+                            );
+                          }).toList(),
                         ),
                       );
                     },

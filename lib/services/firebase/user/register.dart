@@ -5,7 +5,7 @@ Future<void> register(
     String name, String username, String email, String password,
     [String role = "student"]) async {
   final response = await http.post(
-    Uri.parse('http://192.168.18.171:5001/user/register'),
+    Uri.parse('http://192.168.1.7:5001/user/register'),
     headers: {'Content-Type': 'application/json'},
     body: json.encode({
       'name': name,

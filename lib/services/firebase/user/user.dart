@@ -4,7 +4,7 @@ import 'package:quizz/services/firebase/user/model/user_model.dart';
 
 Future<List<User>> fetchUsers() async {
   var response =
-      await http.get(Uri.parse('http://192.168.18.171:5001/user/getall'));
+      await http.get(Uri.parse('http://192.168.1.7:5001/user/getall'));
   // await http.get(Uri.parse('http://172.20.10.2:5001/user/getall'));
   // await http.get(Uri.parse('http://172.16.18.78:5001/user/getall'));
   print(response.body);

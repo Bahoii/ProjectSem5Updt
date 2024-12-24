@@ -4,7 +4,7 @@ import 'package:quizz/services/firebase/user/model/user_model.dart';
 
 Future<User?> login(String username, String password) async {
   final response = await http.post(
-    Uri.parse('http://192.168.18.171:5001/user/login'),
+    Uri.parse('http://192.168.1.7:5001/user/login'),
     headers: {"Content-Type": "application/json"},
     body: jsonEncode({
       "username": username,

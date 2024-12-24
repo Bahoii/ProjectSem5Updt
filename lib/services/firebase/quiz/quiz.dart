@@ -4,7 +4,7 @@ import 'package:quizz/services/firebase/quiz/model/quiz_model.dart';
 
 Future<List<QuizModel>> fetchQuiz() async {
   var response =
-      await http.get(Uri.parse('http://192.168.18.171:5001/quiz/getall'));
+      await http.get(Uri.parse('http://192.168.1.7:5001/quiz/getall'));
   // await http.get(Uri.parse('http://172.20.10.2:5001/quiz/getall'));
   // await http.get(Uri.parse('http://172.16.18.78:5001/quiz/getall'));
 

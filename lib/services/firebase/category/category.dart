@@ -5,7 +5,7 @@ import 'package:quizz/services/firebase/category/model/category_model.dart';
 Future<void> fetchCategories() async {
   // final url = Uri.parse('http://172.16.18.78:5001/categories');
   // final url = Uri.parse('http://172.20.10.2:5001/categories');
-  final url = Uri.parse('http://192.168.18.171:5001/categories');
+  final url = Uri.parse('http://192.168.1.7:5001/categories');
   try {
     final response = await http.get(url);
 

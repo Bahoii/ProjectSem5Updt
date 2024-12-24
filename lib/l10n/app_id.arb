@@ -1,0 +1,19 @@
+{
+  "@@locale": "id",
+  "bahasa": "Bahasa",
+  "@bahasa": {
+    "description": "Bahasa Perangkat"
+  },
+  "halo": "Halo",
+  "@halo": {
+    "description": "Halo"
+  },
+  "login": "masuk",
+  "@login": {
+    "description": "Login"
+  },
+  "belajar": "Mari Mulai Belajar",
+  "@belajar": {
+    "description": "Mulai Belajar"
+  }
+}

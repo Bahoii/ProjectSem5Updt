@@ -11,6 +11,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_localizations:
+    sdk: flutter
   font_awesome_flutter: ^9.1.0
   youtube_player_flutter: ^8.0.0
   cupertino_icons: ^1.0.6
@@ -35,15 +37,16 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
-
+  flutter_gen: ^5.8.0
+  intl_translation: ^0.20.1
   flutter_lints: ^3.0.0
 
 flutter:
   uses-material-design: true
-
+  generate: true
   assets:
     - assets/
-    #  - assets/john.jpg
+    - lib/l10n/
     # - assets/sarah.jpg
     # - assets/michael.jpg
     # - assets/emily.jpg

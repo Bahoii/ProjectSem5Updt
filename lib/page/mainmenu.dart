@@ -1,6 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:quizz/language.dart';
 import 'package:quizz/page/courseandquiz.dart';
 import 'package:quizz/page/coursehall_2/accounting.dart';
 import 'package:quizz/page/dasboard.dart';
@@ -245,8 +246,8 @@ class MainMenuState extends State {
                     Navigator.of(context).pushReplacement(MaterialPageRoute(
                         builder: (context) => const LoginPage()));
                   },
-                  child: const Text(
-                    'LOGIN',
+                  child: Text(
+                    AppLocale.translate(context, 'login'),
                     style: TextStyle(fontSize: 15, color: Colors.white),
                   ),
                 ),
@@ -413,8 +414,8 @@ class MainMenuState extends State {
                 ),
               ),
               const SizedBox(height: 10),
-              const Text(
-                "Mari Mulai Belajar",
+              Text(
+                AppLocale.translate(context, 'belajar'),
                 style: TextStyle(fontSize: 35, fontWeight: FontWeight.bold),
               ),
               const Text(
